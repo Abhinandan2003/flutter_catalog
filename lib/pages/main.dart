@@ -3,6 +3,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/cartpage.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:flutter_catalog/utils/routes.dart';
@@ -24,12 +25,13 @@ class MyApp extends StatelessWidget {
       darkTheme: mytheme.DarkTheme(context),
    
       debugShowCheckedModeBanner: false,
-      initialRoute: Myroutes.homeroute,
+      initialRoute: Myroutes.loginroute,
 
       routes: {
         "/": (context) => const LoginPage(),
         Myroutes.loginroute: (context) => const LoginPage(),
-        Myroutes.homeroute: (context) => const HomePage()
+        Myroutes.homeroute: (context) => const HomePage(),
+        Myroutes.cartpageroute: (context) => const Cartpage()
       },
     );
   }

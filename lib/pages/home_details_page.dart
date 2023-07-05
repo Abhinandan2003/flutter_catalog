@@ -13,10 +13,12 @@ class homedetailpage extends StatelessWidget {
   Widget build(BuildContext context) {
     
      return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: mytheme.creamcolor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child:  ButtonBar(
                 alignment: MainAxisAlignment.spaceBetween,
                 buttonPadding: EdgeInsets.zero,
@@ -24,10 +26,10 @@ class homedetailpage extends StatelessWidget {
                   "\$${catalog.price}".text.bold.xl4.red800.make(),
                   ElevatedButton(onPressed: () {},
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(mytheme.darkbluish),
+                    backgroundColor: MaterialStateProperty.all(context.theme.hintColor),
                     shape: MaterialStateProperty.all(StadiumBorder()),
                   ),
-                   child: "Buy".text.xl.make()).wh(100, 50)
+                   child: "Add to Cart".text.xl.make()).wh(130, 50)
                 ],
                 
 
@@ -47,13 +49,18 @@ class homedetailpage extends StatelessWidget {
                 arcType: VxArcType.convey,
                 edge: VxEdge.top,
              child: Container(
-              color: Colors.white,
+              color: context.cardColor,
               width: context.screenWidth,
               child: Column(
                 children: [
-                     catalog.name.text.xl4.color(mytheme.darkbluish).bold.make(),
+                     catalog.name.text.xl4.color(context.accentColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).xl.make(),
               10.heightBox,
+              "Kind dry them green to replenish creepeth face is herb without day seas great, one. Good his gathered is day night sixth itself them grass wherein may life kind. Seed doesn't fill. Moved fourth yielding open one subdue to void man, green may greater saw blessed bring. Sea living Lights."
+              .text
+              .textStyle(context.captionStyle)
+              .make()
+              .p12()
                 ],
               ).py64(),
              )))
