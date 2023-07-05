@@ -1,0 +1,58 @@
+{"products" : [
+    {
+      "id": 1,
+      "name": "Iphone 12 pro",
+      "desc": "Apple iphone 12th generation",
+      "price": 999,
+      "color": "#000000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7w9Sz-R1JSsnoZCPXG5BpPSsnF6xl5wv-A7eUoD4hkmnm-jS5MqDVD0m0fBeFevdcNtg&usqp=CAU"
+     
+    },
+    {
+      "id": 2,
+      "name": "Asus TUF Gaming F15",
+      "desc": "Core i5 , nvdia gtx1650ti",
+      "price": 799,
+      "color": "#C0C0C0",
+      "image": "https://m.media-amazon.com/images/I/81lHQtEn9ZL._AC_UF1000,1000_QL80_.jpg"
+      
+    },
+    {
+      "id": 3,
+      "name": "Ipad Pro M2",
+      "desc": "Apple ipad 11inch M2 chipset",
+      "price": 699,
+      "color": "#FFFFFF",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-pro-11-2020-1.jpg"
+      
+    },
+    {
+      "id": 4,
+      "name": "Samsung Galaxy S23 Ultra",
+      "desc": "Galaxy S23 Ultra  with spen and samsung dex",
+      "price": 1199,
+      "color": "#0000FF",
+      "image": "https://uk.etoren.com/upload/images/0.14907300_1675508574_samsung-galaxy-s23-ultra-5g-sm-s918b-dual-sim-512gb-sky-blue-12gb-ram-support-esim.jpg"
+     
+    },
+    {
+      "id": 5,
+      "name": "Asus Zenbook 13 OLED",
+      "desc": "core i7 oled touchscreen",
+      "price": 1099,
+      "color": "#000000",
+      "image": "https://m.media-amazon.com/images/I/71LgGMf6cmL._AC_UF1000,1000_QL80_.jpg"
+      
+    },
+    {
+      "id": 6,
+      "name": "Samsung Tab A7",
+      "desc": "Samsung galaxy tab 7th gen",
+      "price": 579,
+      "color": "#808080",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUfVh1PRrgbnjZQnyr5nuJ5IRiucKxRJQCVqJ6JCoXekiDhLUfO463lrjKIkc_-QmW_lg&usqp=CAU"
+      
+    }
+  ]
+}
+  
