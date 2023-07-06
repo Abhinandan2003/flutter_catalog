@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme:mytheme.LightTheme(context),
       darkTheme: mytheme.DarkTheme(context),
    
       debugShowCheckedModeBanner: false,
-      initialRoute: Myroutes.loginroute,
+      initialRoute: Myroutes.homeroute,
 
       routes: {
         "/": (context) => const LoginPage(),

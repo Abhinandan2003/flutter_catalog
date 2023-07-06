@@ -9,14 +9,22 @@ class catalogmodel {
     price: 999,
     color: "#33505a",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7w9Sz-R1JSsnoZCPXG5BpPSsnF6xl5wv-A7eUoD4hkmnm-jS5MqDVD0m0fBeFevdcNtg&usqp=CAU"
+
+   
     
   )
-];
+  ];
+
+    Item getById(num id)=>
+    items.firstWhere((element) => element.id == id , orElse: null);
+
+Item getByPosition(int pos)=> items[pos];
+
 
   
 }
 class Item {
-  final num id;
+  final int id;
   final String name;
   final String desc;
   final num price;
