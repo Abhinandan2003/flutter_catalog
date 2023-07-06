@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, unused_element
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/models/cart.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class Cartpage extends StatelessWidget {
@@ -31,17 +33,19 @@ class _CartTotal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = CartModel();
+
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$9999".text.xl4.color(context.accentColor).make(),
+          "\$${_cart.totalprice}".text.xl4.color(context.accentColor).make(),
           30.widthBox,
           ElevatedButton(
                   onPressed: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: "Buying not supported yet".text.make()));
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: "Buying not supported yet".text.make()));
                   },
                   style: ButtonStyle(
                     backgroundColor:
@@ -66,15 +70,23 @@ class CartList extends StatefulWidget {
 class _CartListState extends State<CartList> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: 5,
-        itemBuilder: (context, index) => ListTile(
-              leading: Icon(Icons.done_all_rounded),
-              trailing: IconButton(
-                icon: Icon(Icons.remove_circle_outline),
-                onPressed: () {},
-              ),
-              title: "item 1".text.make(),
-            ));
+    final _cart = CartModel();
+    return _cart.items.isEmpty
+        ? "Cart is Empty".text.xl3.makeCentered()
+        : ListView.builder(
+            itemCount: _cart.items.length,
+            itemBuilder: (context, index) => ListTile(
+                  leading: Icon(Icons.done_all_rounded),
+                  trailing: IconButton(
+                    icon: Icon(CupertinoIcons.cart_fill_badge_minus),
+                    onPressed: () {
+                      _cart.remove(_cart.items[index]);
+                      setState(() {
+                        
+                      });
+                    },
+                  ),
+                  title: _cart.items[index].name.text.make(),
+                ));
   }
 }
