@@ -12,9 +12,7 @@ class catalogmodel {
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7w9Sz-R1JSsnoZCPXG5BpPSsnF6xl5wv-A7eUoD4hkmnm-jS5MqDVD0m0fBeFevdcNtg&usqp=CAU")
   ];
 
-  static final catModel = catalogmodel._internal();
-  catalogmodel._internal();
-  factory catalogmodel() => catModel;
+
 
   Item getById(num id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
